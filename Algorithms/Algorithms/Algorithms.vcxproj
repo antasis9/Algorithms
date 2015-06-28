@@ -10,6 +10,15 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Main.cpp" />
+    <ClCompile Include="..\MatrixTerm.cpp" />
+    <ClCompile Include="..\SparseMatrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MatrixTerm.h" />
+    <ClInclude Include="..\SparseMatrix.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{25CF10A4-C10D-441E-9879-5B581FF5C97E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -75,15 +84,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Documents\Visual Studio 2013\Projects\Algorithms\Algorithms\MatrixTerm.h" />
-    <ClInclude Include="..\..\..\..\..\Documents\Visual Studio 2013\Projects\Algorithms\Algorithms\SparseMatrix.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Documents\Visual Studio 2013\Projects\Algorithms\Algorithms\Main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\Visual Studio 2013\Projects\Algorithms\Algorithms\MatrixTerm.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\Visual Studio 2013\Projects\Algorithms\Algorithms\SparseMatrix.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
