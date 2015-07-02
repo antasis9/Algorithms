@@ -9,12 +9,12 @@ using namespace std;
 #define	COLUMNS	38
 
 int main() {
-	String content("ababdababc");
+	String content("afdsafsdfsdvxzaabcabcacadabcabcacabaaaa");
 	String pattern("abcabcacab");
 
-	content.Search(&pattern);
+	int index = content.Search(&pattern);
 
-	int length = pattern.GetLength();
+	cout << "Index: " << index << endl;
 
 	return 0;
 }
