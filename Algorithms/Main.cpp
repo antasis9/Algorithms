@@ -14,5 +14,7 @@ int main() {
 
 	content.Search(&pattern);
 
+	int length = pattern.GetLength();
+
 	return 0;
 }
