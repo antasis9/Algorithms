@@ -10,10 +10,11 @@ public:
 	Bag(int);
 	~Bag();
 	void Add(const T& item);
-	T* Delete(T& item);
+	virtual T* Delete(T& item);
 	bool IsFull();
 	bool IsEmpty();
-private:
+
+protected:
 	void Full();
 	void Empty();
 	T* items;
@@ -56,7 +57,7 @@ T* Bag<T>::Delete(T& item)
 		int deleteIndex = top / 2;
 		int value = items[deleteIndex];
 
-		for (int index = deleteIndex; i < top; i++) {
+		for (int index = deleteIndex; index < top; index++) {
 			items[index] = items[index + 1];
 		}
 

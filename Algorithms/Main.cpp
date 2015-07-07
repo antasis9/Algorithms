@@ -3,6 +3,7 @@
 #include "SparseMatrix.h"
 #include "Algorithms\String.h"
 #include "Algorithms\Bag.h"
+#include "Algorithms\Stack.h"
 
 using namespace std;
 
@@ -24,6 +25,20 @@ int main() {
 	//bag.Add(13);
 	//bag.Add(14);
 	//bag.Add(15);
+
+	Stack<int> stack(5);
+
+	stack.Add(1);
+	stack.Add(2);
+	stack.Add(3);
+	stack.Add(4);
+	stack.Add(5);
+
+	for (int i = 0; i < 5; i++) {
+		int value = 0;
+
+		cout << "Value: " << *stack.Delete(value) << endl;
+	}
 
 	return 0;
 }
