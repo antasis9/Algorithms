@@ -22,24 +22,3 @@ T* Stack<T>::Delete(T& item) {
 
 	return &item;
 }
-
-
-//template <class T>
-//virtual T* Bag<T>::Delete(T& item)
-//{
-//	if (IsEmpty()) {
-//		Empty();
-//	}
-//	else {
-//		int deleteIndex = top / 2;
-//		int value = items[deleteIndex];
-//
-//		for (int index = deleteIndex; index < top; index++) {
-//			items[index] = items[index + 1];
-//		}
-//
-//		top--;
-//
-//		return &value;
-//	}
-//}

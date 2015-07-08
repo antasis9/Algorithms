@@ -55,7 +55,7 @@ T* Bag<T>::Delete(T& item)
 	}
 	else {
 		int deleteIndex = top / 2;
-		int value = items[deleteIndex];
+		T value = items[deleteIndex];
 
 		for (int index = deleteIndex; index < top; index++) {
 			items[index] = items[index + 1];
