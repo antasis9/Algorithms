@@ -43,7 +43,7 @@ int main() {
 	};
 
 	Maze maze;
-	maze.Search(array, 5);
+	maze.Search(array, 4);
 
 	/*for (int i = 0; i < 5; i++) {
 		int value = 0;
