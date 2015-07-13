@@ -5,6 +5,7 @@
 #include "Algorithms\Bag.h"
 #include "Algorithms\Stack.h"
 #include "Algorithms\Maze.h"
+#include "Algorithms\List.h"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ int main() {
 	//stack.Add(4);
 	//stack.Add(5);
 
-	char array[4][5] = {
+	/*char array[4][5] = {
 		{ '1', '0', '1', '1', '1' },
 		{ '0', '1', '1', '0', '1' },
 		{ '0', '0', '1', '0', '1' },
@@ -43,13 +44,19 @@ int main() {
 	};
 
 	Maze maze;
-	maze.Search(array, 4);
+	maze.Search(array, 4);*/
 
 	/*for (int i = 0; i < 5; i++) {
 		int value = 0;
 
 		cout << "Value: " << *stack.Delete(value) << endl;
 	}*/
+
+	int value = 50;
+
+	List<int>* list = new List<int>();
+	list->Insert(value);
+	list->Delete(value);
 
 	return 0;
 }
