@@ -5,6 +5,7 @@
 #include "Algorithms\Bag.h"
 #include "Algorithms\Stack.h"
 #include "Algorithms\Maze.h"
+#include "Algorithms\ListIterator.h"
 #include "Algorithms\List.h"
 
 using namespace std;
@@ -53,10 +54,19 @@ int main() {
 	}*/
 
 	int value = 50;
+	int value2 = 51;
 
 	List<int>* list = new List<int>();
 	list->Insert(value);
-	list->Delete(value);
+	list->Insert(value2);
+	//list->Delete(value);
+
+	ListIterator<int> iterator(list);
+
+	while (iterator.NextNotNull()) {
+		cout << *iterator.Next() << endl;
+	}
+	
 
 	return 0;
 }

@@ -1,14 +1,21 @@
 #pragma once
 
 #include <iostream>
+
 using namespace std;
 
 template <class Type> 
 class List;
 
 template <class Type>
+class ListIterator;
+
+#include "ListIterator.h"
+
+template <class Type>
 class ListNode {
 	friend class List < Type > ;
+	friend class ListIterator < Type > ;
 
 private:
 	Type data;
@@ -17,6 +24,7 @@ private:
 
 template <class Type>
 class List {
+	friend class ListIterator < Type >;
 public:
 	List();
 	~List();
@@ -57,7 +65,9 @@ void List<Type>::Insert(Type& item) {
 	// 마지막 아이템을 구한다.
 	ListNode<Type>* last = first;
 
-	while (last->link != NULL) {}
+	while (last->link != NULL) {
+		last = last->link;
+	}
 
 	ListNode<Type>* newNode = new ListNode<Type>();
 	newNode->data = item;
