@@ -51,6 +51,36 @@ public class LinkedList<T> {
 		return false;
 	}
 
+	public T get(int index) {
+		if (index + 1 > size()) {
+			return null;
+		}
+		
+		Node<T> node = headNode.nextNode;
+		
+		for(int i = 0; i < index; i++) {
+			node = node.nextNode;
+		}
+		
+		return node.value;
+	}
+
+	public int size() {
+		int size = 0;
+
+		Node<T> currentNode = headNode.nextNode;
+
+		while (true) {
+			if (currentNode == tailNode) {
+				return size;
+			}
+
+			size++;
+
+			currentNode = currentNode.nextNode;
+		}
+	}
+
 	@Override
 	public String toString() {
 		Node<T> currentNode = headNode.nextNode;
