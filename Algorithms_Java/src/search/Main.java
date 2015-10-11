@@ -25,16 +25,22 @@ public class Main {
 
 		String content = builder.toString();
 
-		NaiveSearch search = new NaiveSearch();
+		// content = "w 17:9 And here is the mind which hath wisdo ajqwjeioq";
+		String pattern = "And the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof";
 
-		int index = search.bruteForce(content, "17:9 And here is the mind which hath wisdo");
-		
+		// NaiveSearch search = new NaiveSearch();
+		KarpRabin search = new KarpRabin();
+
+		// int index = search.bruteForce(content, "17:9 And here is the mind
+		// which hath wisdo");
+		int index = search.karpRabin(content, pattern);
+
 		System.out.println("Index: " + index);
 
 		if (index == -1) {
 			System.out.println("Can't find words");
 		} else {
-			System.out.println(content.substring(index, index + "17:9 And here is the mind which hath wisdo".length()));
+			System.out.println(content.substring(index, index + pattern.length()));
 		}
 	}
 }
